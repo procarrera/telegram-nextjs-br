@@ -10,9 +10,9 @@ export default function Home() {
           <b>Next.JS</b>
         </span>
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-3 md:justify-self-center my-6'>
-          <Image src="/group-feed.svg" width={260} height={500} />
-          <Image src="/group-feed.svg" width={260} height={500} />
-          <Image src="/group-feed.svg" width={260} height={500} />
+          <Image src="/feed-1.png" width={260} height={626} />
+          <Image src="/feed-2.png" width={260} height={626} />
+          <Image src="/feed-3.png" width={260} height={626} />
         </div>
       </div>
     </div>
