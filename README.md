@@ -1,3 +1,11 @@
+# Next.js - Brasil 
+Este é o repo do grupo Next.js - Brasil no Telegram. 
+
+Este branch em especial é o `chakra`. Foi feito pra que possamos converter o site pra framework Chakra-UI e aprovar os arquivos.
+
+>> Abaixo, readme original.
+-------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

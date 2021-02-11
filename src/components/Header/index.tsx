@@ -1,19 +1,44 @@
 import React from "react";
+import { Box, chakra, Flex } from '@chakra-ui/react'
+import Container from "../Container";
+
+const imgs = {
+  emojis: "/images/backgrounds/emojis.png",
+  logo: "/images/logos/logo.svg",
+  nextBr: "/images/logos/next-br.svg"
+}
 
 const Header: React.FC = () => {
   return (
-    <div className="flex flex-col bg-none md:bg-emojis-pattern md:bg-right-top md:bg-contain bg-no-repeat lg:bg-right lg:bg-auto">
-      <div className='h-20 flex my-6 item-center justify-center md:justify-start'>
-        <img src="/logo.svg" className={'h-full'}/>
-        <img src="/next-br.svg" className={'h-full'}/>
-      </div>
-      <div className="bg-tele-blue py-2 text-center text-white">
+    <Flex 
+      flexDir="column"
+      bgImage={["none", ,`url(${imgs.emojis})`]}
+      bgSize={[ , , "contain", "auto"]}
+      bgPosition={[, ,"top right", "right"]}
+      bgRepeat="no-repeat"
+      >
+      <Container>
+        <Flex
+          h={20}
+          my={6}
+          alignItems="center"
+          justify={["center", , "flex-start"]}
+          
+          >
+          <chakra.img src={imgs.logo} h="100%"/>
+          <chakra.img src={imgs.nextBr} h="100%"/>
+        </Flex>
+      </Container>
+      <Box bgColor="telegram.400" py={2} textAlign="center" color="white">
         Ainda não é membro do grupo?
-        <a href="https://t.me/nextjs_br" className="font-semibold pl-2">
+        <chakra.a 
+          pl={2} 
+          fontWeight="semibold"
+          href="https://t.me/nextjs_br">
           Entre agora!
-        </a>
-      </div>
-    </div>
+        </chakra.a>
+      </Box>
+    </Flex>
   );
 };
 

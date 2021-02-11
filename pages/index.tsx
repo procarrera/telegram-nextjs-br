@@ -1,20 +1,56 @@
+import { AspectRatio, Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
+
+const imgs = {
+  bgs: {
+    emojis: "/images/backgrounds/emojis.png",
+    telegram: "/images/backgrounds/telegram.jpg"
+  }
+}
 
 export default function Home() {
   return (
-    <div className="pt-8 md:pt-0 bg-telegram-pattern text-gray-900 flex-1 flex flex-col items-center justify-center">
-      <div className="leading-10 flex flex-col items-center sm:items-start max-w-screen-md mx-6 lg:mx-0">
-        <span className="text-5xl font-black">Bem-vindo!</span>
-        <span className="text-xl">
+    <Box
+      as={Flex} 
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      flex="1"
+      w="screenW"
+      pt={[8, , 0]}
+      color="gray.900"
+      bgImage={`url(${imgs.bgs.telegram})`}
+      >
+      <Flex 
+        flexDirection="column"
+        lineHeight={10}
+        alignItems={["center", "flex-start"]}
+        
+        mx={[6, , ,0]}
+        bgImage={`url(${imgs.bgs.telegram})`}
+        >
+        <Text as="span" fontSize="5xl" fontWeight="black">Bem-vindo!</Text>
+        <Text as="span" fontSize="xl">
           Somos um grupo de Telegram destinado ao aprendizado e evolução em{" "}
           <b>Next.JS</b>
-        </span>
-        <div className='grid grid-cols-1 gap-6 sm:grid-cols-3 md:justify-self-center my-6'>
-          <Image src="/feed-1.png" width={260} height={626} />
-          <Image src="/feed-2.png" width={260} height={626} />
-          <Image src="/feed-3.png" width={260} height={626} />
-        </div>
-      </div>
-    </div>
+        </Text>
+        <SimpleGrid 
+          columns={[1, 3]}  
+          justifySelf={[, ,'center']}
+          my={6}
+          spacing={8}
+          >
+          {['1','2','3'].map((img, i) => {
+            return (
+              <AspectRatio 
+                ratio={260/626} 
+                minW={64}>
+                <Image src={`/images/misc/feed-${img}.png`} key={i} layout="fill" objectFit="contain"/>
+              </AspectRatio>
+            )
+          })}
+        </SimpleGrid>
+      </Flex>
+    </Box>
   );
 }
