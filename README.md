@@ -3,7 +3,25 @@ Este é o repo do grupo Next.js - Brasil no Telegram.
 
 Este branch em especial é o `chakra`. Foi feito pra que possamos converter o site pra framework Chakra-UI e aprovar os arquivos.
 
->> Abaixo, readme original.
+## Update Log
+- Foi instalado o Chakra-UI e removido o TailwindCSS, assim como o PostCSS (desnecessário)
+- Criadas classes de medida similares às do Tailwind, que não estão presentes no Chakra
+  - "full"
+  - "screenW"
+  - "screenH"
+- Adição do uso do componente Chakra/Aspect Ratio, que em conjunto com next/Image, funciona legal pra manter as proporções de todas as imagens.
+- Criado o componente Container para melhor controle de layout
+- Ajustados os breakpoints de forma a evitar incidentes em que o usuário esbarre em mudanças de layout. 
+  * _nota_: a prática, muito comum, de lidar com breakpoints como "768px", 1020px" etc. é complicada, porque ela infere que os limiares de uso pra um layout X ou Y se dá na margem do que é uma tela. O correto é abordarmos breakpoints mais abertos, que estejam entre essas resoluções populares. TL;DR: você estaciona o carro no meio da vaga ou em cima da linha?
+- Reorganizados os folders de imagem
+- Organizados os folders para tema
+
+### Considerações: 
+Talvez valha a pena remover o elemento "pai" do app afim de evitar problemas no caso de utilização de outras técnicas no futuro (que não Flex). Não sei o que vocês pensam disso.
+
+Mantive o layout, não alterei basicamente nada.
+
+== Abaixo, readme original. ==
 -------
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
