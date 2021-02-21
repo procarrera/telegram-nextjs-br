@@ -1,9 +1,18 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Heading, Text, GridItem, AspectRatio, Button, HStack, Stack, Icon, VStack, chakra,} from "@chakra-ui/react";
+import { 
+  Box,
+  Heading, 
+  Text, 
+  GridItem, 
+  AspectRatio, 
+  Button, HStack, 
+  Stack, 
+  VStack, 
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from 'next/link'
 import Container from "../src/components/Container";
-import Section from '../src/components/Container'
 import CustomGrid from "../src/components/Grid";
 
 const imgs = {
@@ -11,16 +20,18 @@ const imgs = {
     emojis: "/images/backgrounds/emojis.png",
     telegram: "/images/backgrounds/telegram.jpg"
   },
-  hero: "/images/hero/hero.png",
-  sobre: "/images/sobre/about.png"
+  hero: "/images/hero/hero-2.png",
+  sobre: "/images/sobre/about-2.png"
 }
 
 const section = {
   minH: [ '', , , ,'82vh'  ],
-  py: [ 12, , 6, , ]
+  py: [ 6, , 6, 12, ]
 }
 
+
 export default function Home() {
+  const buttonSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg'})
   return (
     <>
     <Box as="section" minH={section.minH} py={section.py}>
@@ -35,8 +46,7 @@ export default function Home() {
           >
             <Stack>
               <Heading 
-                fontSize="2xl"
-                
+                fontSize={["xl", , "2xl"]}
                 letterSpacing="tight"
                 color="orange.500">Bem-vindo ao mundo do Next.JS!</Heading>
               <Text>
@@ -45,11 +55,12 @@ export default function Home() {
               </Text>
               <HStack spacing={4}>
                 <Button 
-                  size={"lg"} 
+                  size={buttonSize}
                   colorScheme="indigoBlue"
-                  >Quero fazer parte</Button>
+                  >
+                    Quero fazer parte</Button>
                 <Button 
-                  size="lg" 
+                  size={buttonSize} 
                   colorScheme="blueGreen"
                   >Saiba mais</Button>
               </HStack>
@@ -58,7 +69,7 @@ export default function Home() {
           <GridItem
             className="hero-image"
             colSpan={[2, 4, , 7]}
-            colStart={[ , 2, , 6]}
+            colStart={[1 , , , 6]}
             rowStart={[1]}
           >
             <AspectRatio ratio={1} w="100%">
@@ -91,7 +102,7 @@ export default function Home() {
         <CustomGrid>
           <GridItem colSpan={[2, 4, , 6]}>
             <AspectRatio ratio={1} w="full">
-              <Image src={imgs.sobre} layout="fill" objectFit="contain" />
+              <Image src={imgs.sobre} layout="fill" objectFit="contain" quality="100" />
             </AspectRatio>
           </GridItem>
           <GridItem colSpan={[2, 4, , 5]} colStart={[ , 5, , 8]} alignSelf="center">

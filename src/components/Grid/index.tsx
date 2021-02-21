@@ -11,7 +11,7 @@ const CustomGrid: React.FC = ({children}) => {
         'repeat(12, .083333333fr)',
       ]}
       alignItems="center"
-      columnGap={8}
+      columnGap={[4, , 8]}
       h="100%"
     >
       {children}
