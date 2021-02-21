@@ -16,16 +16,16 @@ const styles = {
       fontWeight: 'bold',
       position: 'relative',
       transition: 'all .2s ease-in-out',
-      zIndex: 50,
+      zIndex: 100,
       _after: {
         transition: 'all .2s ease-in-out',
         content: '""',
-        zIndex: 1,
+        zIndex: -10,
         position: 'absolute',
         bottom: 0,
         left: 0,
         bgColor: 'orange.400',
-        h: '1px',
+        h: '2px',
         w: '0%',
         transformOrigin: 'left'
 
