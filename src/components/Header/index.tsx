@@ -114,7 +114,7 @@ const Header: React.FC = () => {
             })}
           </HStack>
           <Spacer />
-          <Button display={['none', , ,'flex']} size={buttonSize} colorScheme="indigoBlue">Faça parte</Button>
+          <Button display={['none', , ,'flex']} size={buttonSize} colorScheme="orange">Faça parte</Button>
           <Box className="mobile-only" display={[, , ,'none']}>
             <IconButton 
               icon={<HamburgerIcon />} 
@@ -182,7 +182,7 @@ const Header: React.FC = () => {
                       )
                     })}
                   </List>      
-                  <Button mt={8} size={buttonSize} colorScheme="indigoBlue">Faça parte</Button>              
+                  <Button mt={8} size={buttonSize} colorScheme="orange">Faça parte</Button>              
                   </DrawerBody>
                 </DrawerContent>
               </DrawerOverlay>

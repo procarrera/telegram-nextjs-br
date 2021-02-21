@@ -8,7 +8,8 @@ const styles = {
       fontFamily: ["Inter, sans-serif"],
       fontSize: '1rem',
       lineHeight: '1.5rem',
-      color: 'white.700'
+      color: 'white.700',
+      bgColor: 'white.50',
     },
     'a': {
       fontFamily: 'display',

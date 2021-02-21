@@ -22,7 +22,7 @@ const overrides = {
   breakpoints,
   colors,
   fonts,
-  fontSizes,
+  //fontSizes,
   components: {
     Heading,
     Button

@@ -12,7 +12,7 @@ const Container: React.FC = ({children}) => {
         "62rem", // ~1020px
         "90rem"  // ~1440px
       ]}
-      px={[8, 0]}
+      px={[8, , 0]}
       mx="auto"
       className="container">
       {children}

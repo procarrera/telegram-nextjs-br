@@ -39,14 +39,14 @@ export default function Home() {
         <CustomGrid>
           <GridItem 
             className="greeting"
-            colSpan={[2, 4, , 5]}
+            colSpan={[2, 8, 5]}
             rowStart={[2, , 1]}
             alignSelf="center"
             justify="center"
           >
             <Stack>
               <Heading 
-                fontSize={["xl", , "2xl"]}
+                fontSize={["3xl"]}
                 letterSpacing="tight"
                 color="orange.500">Bem-vindo ao mundo do Next.JS!</Heading>
               <Text>
@@ -68,7 +68,7 @@ export default function Home() {
           </GridItem>
           <GridItem
             className="hero-image"
-            colSpan={[2, 4, , 7]}
+            colSpan={[2, 8, 7]}
             colStart={[1 , , , 6]}
             rowStart={[1]}
           >
@@ -100,12 +100,12 @@ export default function Home() {
     <Box as="section" id="sobre" minH={section.minH} py={section.py}>
       <Container>
         <CustomGrid>
-          <GridItem colSpan={[2, 4, , 6]}>
+          <GridItem colSpan={[2, 8, , 6]}>
             <AspectRatio ratio={1} w="full">
               <Image src={imgs.sobre} layout="fill" objectFit="contain" quality="100" />
             </AspectRatio>
           </GridItem>
-          <GridItem colSpan={[2, 4, , 5]} colStart={[ , 5, , 8]} alignSelf="center">
+          <GridItem colSpan={[2, 8, , 5]} colStart={[ , , , 8]} alignSelf="center">
             <Heading color="blueGreen.700" fontSize="2xl">Quem somos?</Heading>
             <Text>
               Nosso objetivo é aprender em conjunto, através da divulgação de conteúdo e discussões acerca do desenvolvimento de apps e websites.
