@@ -38,7 +38,10 @@ const styles = {
     },
     'p': {
       marginTop: '0rem',
-      marginBottom: '1.5rem'
+      marginBottom: 6,
+      _notLast: {
+        mb: 2
+      }
     },
   },
   backgroundImage: (theme) => ({ // acho que a gente pode 

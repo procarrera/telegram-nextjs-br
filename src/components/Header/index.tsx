@@ -87,22 +87,22 @@ const Header: React.FC = () => {
                     color="indigoBlue.700"
                     pos="relative"
                     cursor="pointer"
-                    zIndex="docked"
+                    zIndex={50}
                     _hover={{
                       _before: {
-                        w: 'full'
+                        h: '.25rem'
                       }
                     }}
                     _before={{
                       transition: "all .2s ease-in-out",
                       content: '""',
                       pos: 'absolute',
-                      height: '.1275rem',
-                      width: "0%",
-                      bgColor: 'orange.200',
+                      height: '0rem',
+                      width: "100%",
+                      bgColor: 'orange.400',
                       bottom: 0,
-                      zIndex: 'base',
-                      transformOrigin: "left"
+                      zIndex: -1,
+                      transformOrigin: "bottom"
                     }}
                     >{nome}</Text>
                 </Link>

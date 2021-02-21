@@ -1,5 +1,5 @@
 const fonts = {
-    display: ["Domine, sans-serif"],
+    display: ["eskorte-latin, serif"],
     body: ["Inter, sans-serif"],
 }
 

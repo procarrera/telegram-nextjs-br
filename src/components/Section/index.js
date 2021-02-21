@@ -1,16 +1,16 @@
-import React from 'react'
 import { Box } from '@chakra-ui/react'
 import Container from '../Container'
 
-const Section: React.FC = (props) => {
+function Section({ minH, id, children }) {
   return (
     <Box
       as="section"
-      minH="100vh"
-      py={8}
+      id={id}
+      minH={minH}
+      py={20}
     >
       <Container>
-        {props.children}
+        {children}
       </Container>
     </Box>
   )

@@ -1,6 +1,8 @@
 const Heading = {
   baseStyle: {
-    fontFamily: 'display'
+    fontFamily: 'display',
+    mt: 6,
+    mb: 4,
   }
 }
 

@@ -11,7 +11,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/uvu3ulj.css" />
           { 
             //<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
             //<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
