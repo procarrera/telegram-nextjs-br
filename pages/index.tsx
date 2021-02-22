@@ -117,11 +117,20 @@ export default function Home() {
               Como fazer parte
             </Heading>
             <Text>
-              É simples! Basta ter cadastro no app <b>Telegram</b> e acessar <a href="https://t.me/nextjs_br">https://t.me/nextjs_br</a>, ou clique no botão abaixo para ser levado até o grupo.
+              É simples! Basta ter cadastro no app <b>Telegram</b> e acessar <a href="https://t.me/nextjs_br">https://t.me/nextjs_br</a>.
             </Text>
-            <Button size="lg" colorScheme="indigoBlue">
-              Entrar
-            </Button>
+            <HStack>
+              <Link href="nextjs_br" passHref>
+                <Button size={buttonSize} colorScheme="blueGreen">
+                  Entrar no grupo
+                </Button>
+              </Link>
+              <Link href={'/regras-de-uso'}>
+                <Button size={buttonSize} colorScheme="indigoBlue">
+                  Conheça as regras de uso
+                </Button>
+              </Link>
+            </HStack>
           </GridItem>
         </CustomGrid>
       </Container>
