@@ -1,4 +1,5 @@
-import { Box, Button as ChakraButton } from '@chakra-ui/react'
+import { Box, Button as ChakraButton } from "@chakra-ui/react";
+
 const Button = ({
   children,
   color,
@@ -12,17 +13,16 @@ const Button = ({
   rightIcon,
   spinner,
   variant,
-}) => {
-
+}: any) => {
   return (
     <>
-      <Box display={['block', , 'none']}> 
+      <Box display={["block", , "none"]}>
         <ChakraButton
           size="sm"
-          color={!colorScheme ? color : 'white'}
-          bgColor={!colorScheme ? bgColor : colorScheme + '.500'}
+          color={!colorScheme ? color : "white"}
+          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
           _hover={{
-            bgColor: !colorScheme ? bgColor : colorScheme + '.700'
+            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
           }}
           isActive={isActive}
           isFullWidth={isFullWidth}
@@ -32,16 +32,18 @@ const Button = ({
           rightIcon={rightIcon}
           spinner={spinner}
           variant={variant}
-        >{children}</ChakraButton>
+        >
+          {children}
+        </ChakraButton>
       </Box>
 
-      <Box display={['none', , 'block', ,'none']}>
+      <Box display={["none", , "block", , "none"]}>
         <ChakraButton
           size="md"
-          color={!colorScheme ? color : 'white'}
-          bgColor={!colorScheme ? bgColor : colorScheme + '.500'}
+          color={!colorScheme ? color : "white"}
+          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
           _hover={{
-            bgColor: !colorScheme ? bgColor : colorScheme + '.700'
+            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
           }}
           isActive={isActive}
           isFullWidth={isFullWidth}
@@ -51,16 +53,18 @@ const Button = ({
           rightIcon={rightIcon}
           spinner={spinner}
           variant={variant}
-        >{children}</ChakraButton>
+        >
+          {children}
+        </ChakraButton>
       </Box>
 
-      <Box display={['none', , , ,'block']}>
+      <Box display={["none", , , , "block"]}>
         <ChakraButton
           size="lg"
-          color={!colorScheme ? color : 'white'}
-          bgColor={!colorScheme ? bgColor : colorScheme + '.500'}
+          color={!colorScheme ? color : "white"}
+          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
           _hover={{
-            bgColor: !colorScheme ? bgColor : colorScheme + '.700'
+            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
           }}
           isActive={isActive}
           isFullWidth={isFullWidth}
@@ -70,10 +74,11 @@ const Button = ({
           rightIcon={rightIcon}
           spinner={spinner}
           variant={variant}
-        >{children}</ChakraButton>
+        >
+          {children}
+        </ChakraButton>
       </Box>
     </>
-  )
-
-}
-export default Button
+  );
+};
+export default Button;
