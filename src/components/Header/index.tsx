@@ -4,8 +4,7 @@ import {
   chakra, 
   Flex, 
   HStack, 
-  IconButton, 
-  Button, 
+  IconButton,  
   Spacer, 
   Box, 
   Drawer,
@@ -17,9 +16,10 @@ import {
   List,
   ListItem,
   Icon,
-  useBreakpointValue} from '@chakra-ui/react'
+  } from '@chakra-ui/react'
 import { ArrowRightIcon, HamburgerIcon } from '@chakra-ui/icons'
 import Container from "../Container";
+import Button from '../Button'
 import Link from 'next/link'
 
 const imgs = {
@@ -60,9 +60,6 @@ const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-  const buttonSize = useBreakpointValue({
-    base: 'sm', md: 'md'
-  })
   return (
     <Flex 
       as="header"
@@ -114,7 +111,9 @@ const Header: React.FC = () => {
             })}
           </HStack>
           <Spacer />
-          <Button display={['none', , ,'flex']} size={buttonSize} colorScheme="orange">Faça parte</Button>
+          <Box display={['none', , ,'flex']}>
+            <Button colorScheme="orange">Faça parte</Button>
+          </Box>
           <Box className="mobile-only" display={[, , ,'none']}>
             <IconButton 
               icon={<HamburgerIcon />} 
@@ -182,7 +181,7 @@ const Header: React.FC = () => {
                       )
                     })}
                   </List>      
-                  <Button mt={8} size={buttonSize} colorScheme="orange">Faça parte</Button>              
+                  <Button mt={8} colorScheme="orange">Faça parte</Button>              
                   </DrawerBody>
                 </DrawerContent>
               </DrawerOverlay>

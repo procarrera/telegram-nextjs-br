@@ -118,12 +118,12 @@ export default function Home() {
                 <Link href="nextjs_br" passHref>
                   <Button colorScheme="blueGreen">
                     Entrar no grupo
-                </Button>
+                  </Button>
                 </Link>
-                <Link href={'/regras-de-uso'}>
+                <Link href='/regras-de-uso'>
                   <Button colorScheme="indigoBlue">
                     Conheça as regras de uso
-                </Button>
+                  </Button>
                 </Link>
               </HStack>
             </GridItem>
