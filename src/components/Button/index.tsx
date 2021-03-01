@@ -1,5 +1,5 @@
 import { Box, Button as ChakraButton } from "@chakra-ui/react";
-
+import Link from 'next/link'
 const Button = ({
   children,
   color,
@@ -13,70 +13,76 @@ const Button = ({
   rightIcon,
   spinner,
   variant,
+  href
 }: any) => {
+
+  const ButtonBlock = ({ children, size }) => {
+    return (
+      <ChakraButton
+        size={size}
+        color={!colorScheme ? color : "white"}
+        bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
+        _hover={{
+          bgColor: !colorScheme ? bgColor : colorScheme + ".700",
+        }}
+        isActive={isActive}
+        isFullWidth={isFullWidth}
+        isDisabled={isDisabled}
+        loadingText={loadingText}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
+        spinner={spinner}
+        variant={variant}
+      >
+        {children}
+      </ChakraButton>
+    )
+  }
+  const ButtonBlockWithHref = ({ children, href, size }) => {
+    return (
+      <Link href={href}>
+        <ChakraButton
+          size={size}
+          color={!colorScheme ? color : "white"}
+          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
+          _hover={{
+            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
+          }}
+          isActive={isActive}
+          isFullWidth={isFullWidth}
+          isDisabled={isDisabled}
+          loadingText={loadingText}
+          leftIcon={leftIcon}
+          rightIcon={rightIcon}
+          spinner={spinner}
+          variant={variant}
+        >
+          {children}
+        </ChakraButton>
+      </Link>
+    )
+  }
   return (
     <>
       <Box display={["block", , "none"]}>
-        <ChakraButton
-          size="sm"
-          color={!colorScheme ? color : "white"}
-          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
-          _hover={{
-            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
-          }}
-          isActive={isActive}
-          isFullWidth={isFullWidth}
-          isDisabled={isDisabled}
-          loadingText={loadingText}
-          leftIcon={leftIcon}
-          rightIcon={rightIcon}
-          spinner={spinner}
-          variant={variant}
-        >
-          {children}
-        </ChakraButton>
+        {!href
+          ? <ButtonBlock size="sm">{children}</ButtonBlock>
+          : <ButtonBlockWithHref size="sm" href={href}>{children}</ButtonBlockWithHref>
+        }
       </Box>
 
       <Box display={["none", , "block", , "none"]}>
-        <ChakraButton
-          size="md"
-          color={!colorScheme ? color : "white"}
-          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
-          _hover={{
-            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
-          }}
-          isActive={isActive}
-          isFullWidth={isFullWidth}
-          isDisabled={isDisabled}
-          loadingText={loadingText}
-          leftIcon={leftIcon}
-          rightIcon={rightIcon}
-          spinner={spinner}
-          variant={variant}
-        >
-          {children}
-        </ChakraButton>
+        {!href
+          ? <ButtonBlock size="md">{children}</ButtonBlock>
+          : <ButtonBlockWithHref size="md" href={href}>{children}</ButtonBlockWithHref>
+        }
       </Box>
 
       <Box display={["none", , , , "block"]}>
-        <ChakraButton
-          size="lg"
-          color={!colorScheme ? color : "white"}
-          bgColor={!colorScheme ? bgColor : colorScheme + ".500"}
-          _hover={{
-            bgColor: !colorScheme ? bgColor : colorScheme + ".700",
-          }}
-          isActive={isActive}
-          isFullWidth={isFullWidth}
-          isDisabled={isDisabled}
-          loadingText={loadingText}
-          leftIcon={leftIcon}
-          rightIcon={rightIcon}
-          spinner={spinner}
-          variant={variant}
-        >
-          {children}
-        </ChakraButton>
+        {!href
+          ? <ButtonBlock size="lg">{children}</ButtonBlock>
+          : <ButtonBlockWithHref size="lg" href={href}>{children}</ButtonBlockWithHref>
+        }
       </Box>
     </>
   );

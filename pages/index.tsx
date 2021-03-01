@@ -30,6 +30,7 @@ const section = {
   py: [6, , 6, 12,]
 }
 
+const linkJoin = 'https://t.me/nextjs_br'
 
 export default function Home() {
   //const buttonSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg'})
@@ -55,9 +56,9 @@ export default function Home() {
                 uma <em>framework</em> de React para construção de sites da <b>Vercel</b>.
               </Text>
                 <HStack spacing={4}>
-                  <Button colorScheme="indigoBlue">
+                  <Button href={linkJoin} colorScheme="indigoBlue">
                     Quero fazer parte</Button>
-                  <Button colorScheme="blueGreen">Saiba mais</Button>
+                  <Button href="/#sobre" colorScheme="blueGreen">Saiba mais</Button>
                 </HStack>
               </Stack>
             </GridItem>
@@ -115,16 +116,12 @@ export default function Home() {
                 É simples! Basta ter cadastro no app <b>Telegram</b> e acessar <a href="https://t.me/nextjs_br">https://t.me/nextjs_br</a>.
             </Text>
               <HStack>
-                <Link href="nextjs_br" passHref>
-                  <Button colorScheme="blueGreen">
+                  <Button href={linkJoin} colorScheme="blueGreen">
                     Entrar no grupo
                   </Button>
-                </Link>
-                <Link href='/regras-de-uso'>
-                  <Button colorScheme="indigoBlue">
+                  <Button href='/regras-de-uso' colorScheme="indigoBlue">
                     Conheça as regras de uso
                   </Button>
-                </Link>
               </HStack>
             </GridItem>
           </CustomGrid>
