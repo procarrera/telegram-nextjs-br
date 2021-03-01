@@ -31,9 +31,18 @@ const section = {
 }
 
 const typography = {
-  major: ['h1','2xl'],
-  heading: ['h2','xl'],
-  topic: ['h4', 'md']
+  major: {
+    type: 'h1',
+    size: '2xl'
+  },
+  heading: {
+    type: 'h2',
+    size: 'xl'
+  },
+  topic: {
+    type: 'h4', 
+    size: 'md'
+  }
 }
 
 export default function Regras() {
@@ -42,20 +51,20 @@ export default function Regras() {
     <>
     <Box as="section" minH={section.minH} py={section.py}>
       <Container>
-        <Heading color="orange.600" as={major[0]} size={major[1]}>Regras de Uso</Heading>
+        <Heading color="orange.600" as={'h1'} size={major.size}>Regras de Uso</Heading>
         <SimpleGrid columns={[1, , 2]} spacingX={['0', , 16, 24]}>
           <Box>
-          <Heading color="blueGreen.700" as={heading[0]}  size={heading[1]}>Direito Autoral</Heading>
+          <Heading color="blueGreen.700" as={'h2'}  size={heading.size}>Direito Autoral</Heading>
             <Text>Todo o material protegido sob a Lei dos Direitos Autoral - Lei N.º 9.610/98 -, é de propriedade de seu autor original. Videos, apostilas etc. são protegidos e têm seu compartilhamento vedado, exceto em caso explícito que dite o contrário. </Text>
             <Text>Ou seja, cursos profissionais cuja venda é realizada pelo autor, não devem ser compartilhados neste grupo. No entanto, todo e qualquer material aberto e de livre compartilhamento pode sim, ser compartilhado por aqui. </Text>
 
-            <Heading color="blueGreen.700" as={topic[0]} size={topic[1]}>E como saber se o material é ou não livre?</Heading>
+            <Heading color="blueGreen.700" as={'h4'} size={topic.size}>E como saber se o material é ou não livre?</Heading>
             <Text>Basta usar o bom senso. Todos sabem quando o envio de material é ou não, pirataria. </Text>
 
-            <Heading color="blueGreen.700" as={topic[0]} size={topic[1]}>E se ainda assim eu quiser postar material pirata?</Heading>
+            <Heading color="blueGreen.700" as={'h4'} size={topic.size}>E se ainda assim eu quiser postar material pirata?</Heading>
             <Text>A publicação de material considerado pirata será deletada pela administração do grupo e o autor da publicação será notificado sobre o assunto. Não pretendemos expulsar ninguém, até porque acreditamos na "boa fé" da comunidade e sabemos que, em grande maioria, os usuários querem apenas compartilhar conhecimento. </Text>
             <Text>Entretanto, precisamos manter essa regra clara, afim de evitarmos confusões sobre a finalidade do grupo, que não é compartilhar material de terceiros e, sim, conhecimento.</Text>
-            <Heading color="blueGreen.700" as={heading[0]}  size={heading[1]}>Flood</Heading>
+            <Heading color="blueGreen.700" as={'h2'}  size={heading.size}>Flood</Heading>
             <Text>
             Não é raro que um assunto se desvie de Next ou React e vá parar noutro lugar (como por exemplo, CSS, UI, iconografia etc.). Aliás, não vemos problema algum nisso. Todos podemos aprender com a experiência do próximo.
             </Text>
@@ -68,7 +77,7 @@ export default function Regras() {
             Então, sejamos sensatos. Todos aqui são muito tranquilos e podem conversar sobre qualquer outra coisa no privado, certo? 
             </Text>
 
-            <Heading color="blueGreen.700" as={heading[0]}  size={heading[1]}>Protocolo para dúvidas e pedidos de ajuda</Heading>
+            <Heading color="blueGreen.700" as={'h2'}  size={heading.size}>Protocolo para dúvidas e pedidos de ajuda</Heading>
             <Text>
             Ao publicar sua dúvida ou pedir ajuda, tente fornecer a maior quantidade possível de informações acerca do problema. Se for um erro, traga um print do console, um da tela do dispositivo, esclareça para os outros o que é esperado e qual o resultado obtido, se o tiver. 
 E se for novato e não souber fazer nada disso, bom, essa é sua dúvida.
