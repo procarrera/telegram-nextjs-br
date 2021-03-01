@@ -7,7 +7,7 @@ import Header from "../src/components/Header";
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={overrides} >
-      <Flex direction="column" minH="screenH">
+      <Flex direction="column" minH="screenH" wrap="nowrap">
         <Header />
         <Component {...pageProps} />
         <Footer />
