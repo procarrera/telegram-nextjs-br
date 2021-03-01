@@ -8,13 +8,14 @@ const transition = "all .2s ease-in-out"
 
 const Footer: React.FC = () => {
   return (
-    <chakra.a href="https://github.com/orgs/nextjs-br" role="group">
+    <chakra.a mt="auto" href="https://github.com/orgs/nextjs-br" role="group">
       <Flex 
         bgColor="gray.800"
         py={4}
         flexDir="row"
         alignItems="center"
         justify="center"
+        
         transition={transition}
         _groupHover={{
           bgColor: 'gray.700'
