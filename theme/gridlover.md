@@ -5,35 +5,36 @@ html, .root {
 body, .article {
   font-family: 'Inter',sans-serif;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5rem; 
   max-width: 560px;
   margin: auto;
 }
 h1, .h1 {
   font-family: 'eskorte-latin', serif;
   font-size: 4.1111111rem;
-  line-height: 4.5rem;
+  line-height: 4.5rem;  //  line-height: 1.09459459em;
+
   margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
 h2, .h2 {
   font-family: 'eskorte-latin', serif;
   font-size: 2.5555556rem;
-  line-height: 3rem;
+  line-height: 3rem; // 1.17391304em;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 h3, .h3 {
   font-family: 'eskorte-latin', serif;
   font-size: 1.6111111rem;
-  line-height: 3rem;
+  line-height: 3rem; // 1.86206897em;
   margin-top: 1.5rem;
   margin-bottom: 0rem;
 }
 h4, .h4 {
   font-family: 'eskorte-latin', serif;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5rem; // 1.5em;
   margin-top: 1.5rem;
   margin-bottom: 0rem;
 }
@@ -72,3 +73,4 @@ sup {
 sub {
   bottom: -0.25em;
 }
+

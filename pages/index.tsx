@@ -47,14 +47,14 @@ export default function Home() {
               justify="center"
             >
               <Stack>
-                <Heading
-                  fontSize={["3xl"]}
-                  letterSpacing="tight"
-                  color="orange.500">Bem-vindo ao mundo do Next.JS!</Heading>
-                <Text>
+                <Box
+                  as="h2"
+                  textStyle="h1"
+                  color="orange.500">Bem-vindo ao mundo do Next.JS!</Box>
+              <Box textStyle="paragraph">
                   Somos um grupo brasileiro de Telegram dedicado ao aprendizado e evolução em <b>Next.JS</b>,
                 uma <em>framework</em> de React para construção de sites da <b>Vercel</b>.
-              </Text>
+              </Box>
                 <HStack spacing={4}>
                   <Button href={linkJoin} colorScheme="indigoBlue">
                     Quero fazer parte</Button>
@@ -102,19 +102,19 @@ export default function Home() {
               </AspectRatio>
             </GridItem>
             <GridItem colSpan={[2, 8, , 5]} colStart={[, , , 8]} alignSelf="center">
-              <Heading color="blueGreen.700" fontSize="2xl">Quem somos?</Heading>
-              <Text>
+              <Box as="h2" textStyle="h2" color="blueGreen.700">Quem somos?</Box>
+              <Box as="p" textStyle="paragraph">
                 Nosso objetivo é aprender em conjunto, através da divulgação de conteúdo e discussões acerca do desenvolvimento de apps e websites.
-            </Text>
-              <Text>
+            </Box>
+              <Box as="p" textStyle="paragraph">
                 Se você se interessa pelo assunto e deseja aprender ou contribuír, junte-se a nossa comunidade!
-            </Text>
-              <Heading color="blueGreen.700" fontSize="xl">
+            </Box>
+              <Box as="h2" textStyle="h2" color="blueGreen.700">
                 Como fazer parte
-            </Heading>
-              <Text>
+            </Box>
+              <Box as="p" textStyle="paragraph">
                 É simples! Basta ter cadastro no app <b>Telegram</b> e acessar <a href="https://t.me/nextjs_br">https://t.me/nextjs_br</a>.
-            </Text>
+            </Box>
               <HStack>
                   <Button href={linkJoin} colorScheme="blueGreen">
                     Entrar no grupo

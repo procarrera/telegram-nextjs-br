@@ -27,7 +27,7 @@ const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 
 
 
-export default function Regras() {
+export default function Links() {
   return (
     <>
       <Box as="section" minH={section.minH} py={section.py}>
