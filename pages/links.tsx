@@ -116,6 +116,9 @@ export default function Regras() {
                   mb={4}
                 >
                   <GridItem
+                    borderTop="1px"
+                    borderColor="blueGreen.400"
+                    pt={2}
                     id={letter}
                     as={Heading}
                     colSpan={1}
@@ -124,6 +127,10 @@ export default function Regras() {
                     mb="auto"
                     fontSize='4xl'>{letter}</GridItem>
                   <GridItem
+                    borderTop="1px"
+                    borderColor="blueGreen.400"
+                    pt={2}
+
                     colSpan={1}
                     colStart={2}
                     as={List}
