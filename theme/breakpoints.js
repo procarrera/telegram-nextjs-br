@@ -11,6 +11,7 @@ const breakpoints = createBreakpoints({
   md: "900px",
   lg: "1200px",
   xl: "1600px",
+  "2xl": "2100px"
 })
 
 export default breakpoints
