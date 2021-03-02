@@ -47,7 +47,7 @@ const navMenu = [
   },
   {
     nome: 'Links Úteis',
-    url: '/links-uteis'
+    url: '/links'
   },
   {
     nome: 'Regras de Uso',

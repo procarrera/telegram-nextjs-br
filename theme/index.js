@@ -10,6 +10,7 @@ import colors from './foudations/colors'
 // typography
 import fonts from './foudations/fonts'
 import fontSizes from './foudations/fontSizes'
+import textStyles from './foudations/textStyles'
 // Custom breakpoints
 import breakpoints from './breakpoints'
 
@@ -22,7 +23,8 @@ const overrides = {
   breakpoints,
   colors,
   fonts,
-  //fontSizes,
+  textStyles,
+  fontSizes,
   components: {
     Heading,
     Button
