@@ -1,14 +1,30 @@
-import "tailwindcss/tailwind.css";
-import Footer from "../src/components/Footer";
-import Header from "../src/components/Header";
+import { GeistProvider, CssBaseline, Button } from '@geist-ui/react'
+import 'inter-ui/inter.css'
+import { useState } from 'react';
+import Layout from '../src/components/Layout';
+
 
 function MyApp({ Component, pageProps }) {
+  
+  const [themeType, setThemeType] = useState('light')
+  const switchThemes = () => {
+    setThemeType(last => (last === 'dark' ? 'light' : 'dark'))
+  }
+
+  const customTheme = {
+    "Type": "Custom",
+    "Layout": {
+      "pageWidthWithMargin": "600pt"
+    }
+  }
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </div>
+    <GeistProvider themes={customTheme} themeType={themeType} >
+      <CssBaseline />
+      <Layout colorMode={themeType} colorModeSwitch={switchThemes}>
+        <Component {...pageProps} />
+      </Layout>
+    </GeistProvider>
   );
 }
 
