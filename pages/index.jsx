@@ -9,11 +9,11 @@ export default function Home() {
   }
 
   const widths = {
-    md: 16
+    md: 18
   }
 
   return (
-    <Grid.Container justify="center" alignItems="center">
+    <Grid.Container justify="center" alignItems="center" my={4}>
       <Grid xs={24} md={widths.md}>
         <Text h1>Bem-vindo ao mundo do Next.JS!</Text>
       </Grid>
@@ -22,8 +22,8 @@ export default function Home() {
           Somos um grupo brasileiro de Telegram dedicado ao aprendizado e evolução em Next.JS, uma framework de React para construção de sites da Vercel.
         </p>
       </Grid>
-      <Grid xs={widths.md} mt={2}>
-        <Grid.Container gap={2} justify="center">
+      <Grid xs={24}>
+        <Grid.Container gap={2} justify="center" mt={1}>
           <Grid>
             <Button auto type="success">Quero fazer parte</Button>
           </Grid>

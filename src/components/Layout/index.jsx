@@ -4,7 +4,7 @@ import { BsLightbulbFill, BsLightbulb } from 'react-icons/bs'
 
 export default function Layout({ children, colorMode, colorModeSwitch }) {
   return (
-    <Page dotBackdrop w="82rem" >
+    <Page dotBackdrop w="72rem" >
       <Page.Header
         paddingTop={2}
       >
